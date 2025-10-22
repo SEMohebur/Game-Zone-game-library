@@ -83,7 +83,7 @@ const Home = () => {
             </p>
 
             <div className="mt-6 ">
-              <Slider {...settings} className="">
+              <Slider {...settings}>
                 {bannerCards.map((game) => (
                   <div key={game.id} className="px-2">
                     <BannerCard game={game} />
@@ -106,7 +106,7 @@ const Home = () => {
 
           <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3">
             {data?.map((game) => {
-              return <BannerCard game={game}></BannerCard>;
+              return <BannerCard key={game.id} game={game}></BannerCard>;
             })}
           </div>
         </div>

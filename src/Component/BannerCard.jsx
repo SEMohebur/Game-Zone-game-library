@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const BannerCard = ({ game }) => {
   const { category, coverPhoto, description, developer, ratings, title } = game;
@@ -14,7 +15,9 @@ const BannerCard = ({ game }) => {
         <p>Developer : {developer}</p>
         <p>Ratings : {ratings}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Game Detail</button>
+          <Link to={`/detailPage/${game.id}`} className="btn btn-primary">
+            Game Detail
+          </Link>
         </div>
       </div>
     </div>
