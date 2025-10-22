@@ -3,6 +3,7 @@ import RootLayout from "../Layout/RootLayout";
 import Home from "../Pages/Home";
 import Detailpage from "../Pages/Detailpage";
 import AllApp from "../Pages/AllApp";
+import NotFoundPage from "../Pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -14,4 +15,5 @@ export const router = createBrowserRouter([
       { path: "/allApp", element: <AllApp></AllApp> },
     ],
   },
+  { path: "*", element: <NotFoundPage></NotFoundPage> },
 ]);
