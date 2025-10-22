@@ -5,6 +5,8 @@ import Detailpage from "../Pages/Detailpage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import About from "../Pages/About";
 import PrivateRoute from "./PrivateRoute";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +25,8 @@ export const router = createBrowserRouter([
         hydrateFallbackElement: <p>Loading...</p>,
       },
       { path: "/about", element: <About></About> },
+      { path: "/login", element: <Login></Login> },
+      { path: "/register", element: <Register></Register> },
     ],
   },
   { path: "*", element: <NotFoundPage></NotFoundPage> },
