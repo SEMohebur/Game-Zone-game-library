@@ -1,36 +1,69 @@
+import logo from "../assets/11224.jpg";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
+import { ImNewspaper } from "react-icons/im";
+
 const NewsLatter = () => {
   return (
     <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-blue-500 drop-shadow-lg">
-          🎮 Join the Game Zone Community!
+      <div className=" w-11/12 mx-auto ">
+        <h2 className=" flex justify-center">
+          <ImNewspaper className=" mb-15 size-20" />
         </h2>
+        <div className=" flex gap-3 flex-col md:flex-row justify-between ">
+          {/* left  */}
+          <div className=" flex-1">
+            <div className=" flex justify-center mb-5">
+              <img className=" h-40 rounded-full" src={logo} alt="" />
+            </div>
 
-        <p className="text-gray-300 mb-8 text-lg md:text-xl">
-          Stay updated with the latest game releases, tips, and exclusive
-          offers. Subscribe to our newsletter and never miss out on epic
-          adventures!
-        </p>
+            <p className=" text-gray-300">
+              Game Zone is a modern online gaming platform where users can
+              explore, play, and rate popular and new games. It offers various
+              game categories and detailed developer information, creating an
+              exciting and immersive experience for all gaming enthusiasts.
+            </p>
+          </div>
+          {/* right  */}
+          <div className=" flex-1 mb-0">
+            <div>
+              <h2 className=" font-bold text-xl text-amber-200">
+                Diverse Game Collection
+              </h2>
+              <p className=" text-amber-800">
+                – Explore a wide range of trending, action, strategy, and
+                adventure games in one place.
+              </p>
+            </div>
+            <div>
+              <h2 className=" font-bold text-xl text-amber-200">
+                User Ratings & Reviews
+              </h2>
+              <p className=" text-amber-800">
+                -Easily find the best games based on community ratings and
+                player feedback.
+              </p>
+            </div>
+            <div>
+              <h2 className=" font-bold text-xl text-amber-200">
+                Interactive UI Design
+              </h2>
+              <p className=" text-amber-800">
+                – Enjoy a smooth, modern, and responsive interface built for an
+                immersive gaming experience.
+              </p>
+            </div>
 
-        <form className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="p-3 border rounded-lg w-full sm:w-2/3  focus:outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-600 transition-colors text-white font-semibold px-6 py-3 rounded-lg w-full sm:w-auto"
-          >
-            Subscribe
-          </button>
-        </form>
-
-        {/* Footer Text */}
-        <p className="text-gray-400 mt-4 text-sm">
-          We respect your privacy. Unsubscribe at any time.
-        </p>
+            <div>
+              <h2 className="font-bold text-xl text-amber-200">
+                User-friendly
+              </h2>
+              <p className="text-amber-800">
+                – Where players can easily find games, review ports, and explore
+                gameplay.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

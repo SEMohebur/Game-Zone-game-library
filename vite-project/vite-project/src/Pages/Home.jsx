@@ -71,7 +71,7 @@ const Home = () => {
           shadow-[0_4px_20px_rgba(255,0,0,0.6)]"
           >
             <h2 className="text-blue-600 text-4xl md:text-5xl font-bold mb-4 text-center">
-              Explore Trending <span className="text-red-500">Games</span>
+              🔥 Explore Trending <span className="text-red-500">Games</span>
             </h2>
 
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto text-center my-6 leading-relaxed">
@@ -98,18 +98,15 @@ const Home = () => {
       <section>
         <NewsLatter></NewsLatter>
       </section>
-      <section className=" bg-blue-900 ">
-        <div className=" w-11/12 mx-auto py-5">
-          <h2 className=" text-4xl text-center text-cyan-500 py-5 underline">
-            All App
-          </h2>
-
-          <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3">
-            {data?.map((game) => {
-              return <BannerCard game={game}></BannerCard>;
-            })}
-          </div>
-        </div>
+      <section>
+        <h2>All App</h2>
+        {/* <div>{
+          data?.data.map((app)=>{
+            return(
+              <
+            )
+          })
+          }</div> */}
       </section>
     </div>
   );
