@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import teamImg from "../assets/loginPageImg-removebg-preview.png";
+import * as motion from "motion/react-client";
 
 const About = () => {
   //dynamic tab name set
@@ -11,9 +12,17 @@ const About = () => {
       <div className=" w-11/12 mx-auto space-y-10">
         <div className=" text-center">
           {" "}
-          <h2 className=" text-3xl font-semibold text-blue-500">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
+            className=" text-3xl font-semibold text-blue-500"
+          >
             <span className="  text-gray-200">About</span> Game Zone
-          </h2>
+          </motion.h2>
           <p className="text-gray-300">
             {" "}
             At GameZone, we are passionate gamers just like you. Our mission is
@@ -30,7 +39,15 @@ const About = () => {
             Meet Your Team
           </h4>
           {/* cards */}
-          <div className=" grid grid-cols-1 md:grid-cols-3 gap-3">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
+            className=" grid grid-cols-1 md:grid-cols-3 gap-3"
+          >
             <div className="card ">
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
@@ -60,7 +77,7 @@ const About = () => {
                 <p className=" ">Game Reviewer</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

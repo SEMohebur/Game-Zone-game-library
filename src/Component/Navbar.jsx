@@ -3,15 +3,28 @@ import logo from "../assets/loginPageImg-removebg-preview.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Providers/AuthContext";
 import useImg from "../assets/userLog.jpg";
+import * as motion from "motion/react-client";
 
 const Navbar = () => {
   const { user } = use(AuthContext);
   // console.log(user);
+
+  const box = {
+    width: 50,
+    height: 50,
+    backgroundColor: "#9911ff",
+    borderRadius: 100,
+  };
+
+  //
   return (
     <nav className="  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold">
       <div className=" w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center  py-2">
         <NavLink to="/">
-          <img
+          <motion.img
+            whileHover={{ scale: 1.3 }}
+            whileTap={{ scale: 0.9 }}
+            style={box}
             className=" h-12 w-12 border-2 border-b-pink-500 shadow rounded-full"
             src={logo}
             alt=""
@@ -27,8 +40,11 @@ const Navbar = () => {
           </li>
           {user ? (
             <Link to="/profile">
-              <img
-                className=" h-10 w-10 rounded-full"
+              <motion.img
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                style={box}
+                className=" h-10 w-10 rounded-full border-2 border-pink-500 "
                 src={user?.photoURL || useImg}
                 alt="user"
               />

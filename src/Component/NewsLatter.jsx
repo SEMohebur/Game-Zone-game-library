@@ -1,6 +1,7 @@
 import logo from "../assets/11224.jpg";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { ImNewspaper } from "react-icons/im";
+import * as motion from "motion/react-client";
 
 const NewsLatter = () => {
   return (
@@ -9,9 +10,17 @@ const NewsLatter = () => {
         <h2 className=" flex justify-center">
           <ImNewspaper className=" mb-15 size-20" />
         </h2>
-        <div className=" flex gap-3 flex-col md:flex-row justify-between ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          className=" flex gap-3 flex-col md:flex-row justify-between items-center "
+        >
           {/* left  */}
-          <div className=" flex-1">
+          <div className=" flex-1 ">
             <div className=" flex justify-center mb-5">
               <img className=" h-40 rounded-full" src={logo} alt="" />
             </div>
@@ -24,7 +33,7 @@ const NewsLatter = () => {
             </p>
           </div>
           {/* right  */}
-          <div className=" flex-1 mb-0">
+          <div className=" flex-1 ">
             <div>
               <h2 className=" font-bold text-xl text-amber-200">
                 Diverse Game Collection
@@ -63,7 +72,7 @@ const NewsLatter = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

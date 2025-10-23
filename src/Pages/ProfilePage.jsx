@@ -3,6 +3,7 @@ import { AuthContext } from "../Providers/AuthContext";
 import { Link } from "react-router";
 import { auth } from "../firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
+import * as motion from "motion/react-client";
 
 const ProfilePage = () => {
   const { user, setUser, LogOutUser } = use(AuthContext);
@@ -37,7 +38,13 @@ const ProfilePage = () => {
           </div>
           <div className="hero bg-base-200">
             <div className="hero-content flex flex-col text-center ">
-              <img
+              <motion.img
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.4,
+                  scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                }}
                 src={photoURL}
                 className="max-w-sm h-36 w-36  rounded-full shadow-xl  border-3 border-fuchsia-500 p-1 "
               />
@@ -79,7 +86,7 @@ const ProfilePage = () => {
                     <input
                       name="name"
                       type="text"
-                      className="input"
+                      className="input w-full"
                       placeholder="Name"
                       required
                     />
@@ -87,7 +94,7 @@ const ProfilePage = () => {
                     <input
                       name="photo"
                       type="text"
-                      className="input"
+                      className="input w-full"
                       placeholder="Photo Url"
                       required
                     />
