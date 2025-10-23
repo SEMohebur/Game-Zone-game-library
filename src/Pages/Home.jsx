@@ -16,6 +16,8 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err.message));
+    //dynamic tap name set
+    document.title = "Home | Gaming Zone";
   }, []);
 
   const sortedApp = data?.sort(

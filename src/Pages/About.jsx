@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import teamImg from "../assets/11224.jpg";
 
 const About = () => {
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "About | Gaming Zone";
+  }, []);
   return (
     <section className=" bg-blue-950  text-white bg-opacity-90 py-20 px-4">
       <div className=" w-11/12 mx-auto space-y-10">

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { FaStar } from "react-icons/fa";
 
 const Detailpage = () => {
   const data = useLoaderData();
   const { id } = useParams();
+
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "Detail | Gaming Zone";
+  }, []);
 
   const singleGame = data?.find((game) => game.id == id);
 

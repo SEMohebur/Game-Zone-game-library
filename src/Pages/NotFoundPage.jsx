@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 const NotFoundPage = () => {
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "404 Not Found | Gaming Zone";
+  }, []);
   return (
     <>
       <Navbar></Navbar>

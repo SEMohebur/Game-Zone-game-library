@@ -1,8 +1,12 @@
-import React from "react";
+import React, { use } from "react";
 import logo from "../assets/11224.jpg";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../Providers/AuthContext";
+import useImg from "../assets/userLog.jpg";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
+  console.log(user);
   return (
     <nav className="  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold">
       <div className=" w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center  py-2">
@@ -17,14 +21,26 @@ const Navbar = () => {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li className=" flex gap-3">
-            <Link to="/login" className=" btn btn-primary">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link className=" btn btn-warning">Register</Link>
-          </li>
+          {user ? (
+            <img
+              className=" h-10 rounded-full"
+              src={user?.photoURL || useImg}
+              alt=""
+            />
+          ) : (
+            <>
+              <li className=" flex gap-3">
+                <Link to="/login" className=" btn btn-primary">
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className=" btn btn-warning">
+                  Register
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
