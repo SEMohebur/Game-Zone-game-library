@@ -1,16 +1,19 @@
-import React, { Children, useEffect, useState } from "react";
+import React, { Children, useEffect, useRef, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import { auth } from "../firebase/firebase.init";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const [useForgetPageEmail, setUseForgatePageEmail] = useState(null);
   // console.log({ loading, user });
 
   //register
@@ -23,6 +26,16 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  //logOut
+  const LogOutUser = () => {
+    signOut(auth)
+      .then(() => {
+        setUser(null), alert("Sign-out successful.");
+      })
+      .catch((err) => alert(err.message));
+  };
+
+  // name photo upload
   const updateUser = (displayName, photoURL) => {
     return updateProfile(auth.currentUser, { displayName, photoURL });
   };
@@ -45,6 +58,9 @@ const AuthProvider = ({ children }) => {
     loading,
     setLoading,
     updateUser,
+    LogOutUser,
+    useForgetPageEmail,
+    setUseForgatePageEmail,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

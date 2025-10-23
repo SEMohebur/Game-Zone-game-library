@@ -100,7 +100,7 @@ const Home = () => {
       <section>
         <NewsLatter></NewsLatter>
       </section>
-      <section className=" bg-blue-900 ">
+      <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 ">
         <div className=" w-11/12 mx-auto py-5">
           <h2 className=" text-4xl text-center text-cyan-500 py-5 underline">
             All App

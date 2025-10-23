@@ -4,7 +4,7 @@ import { AuthContext } from "../Providers/AuthContext";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = use(AuthContext);
-  console.log(user);
+  // console.log(user);
   //auth er bikolpo
 
   if (loading) {

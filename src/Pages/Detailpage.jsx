@@ -24,7 +24,7 @@ const Detailpage = () => {
   } = singleGame;
 
   return (
-    <div className=" bg-fuchsia-950 text-gray-300">
+    <div className="bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 text-gray-300">
       <div className="  w-11/12 mx-auto">
         <div className=" p-5">
           <div className="card card-side bg-gray-800  shadow-xl flex flex-col md:flex-row">

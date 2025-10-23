@@ -7,14 +7,14 @@ const About = () => {
     document.title = "About | Gaming Zone";
   }, []);
   return (
-    <section className=" bg-blue-950  text-white bg-opacity-90 py-20 px-4">
+    <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 text-white bg-opacity-90 py-20 px-4">
       <div className=" w-11/12 mx-auto space-y-10">
         <div className=" text-center">
           {" "}
-          <h2 className=" text-3xl text-red-500">
-            <span className=" text-blue-500">About</span> GameZone
+          <h2 className=" text-3xl font-semibold text-blue-500">
+            <span className="  text-gray-200">About</span> Game Zone
           </h2>
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             {" "}
             At GameZone, we are passionate gamers just like you. Our mission is
             to bring the most action-packed, thrilling, and immersive gaming

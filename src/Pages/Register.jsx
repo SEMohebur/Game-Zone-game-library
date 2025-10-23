@@ -46,8 +46,9 @@ const Register = () => {
       })
       .catch((err) => alert(err.message));
   };
+
   return (
-    <div className="hero  bg-gray-800 p-5">
+    <div className="hero  bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 p-5">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <h2 className=" font-bold text-3xl text-center py-4">Register</h2>
         <div className="card-body">
@@ -85,9 +86,7 @@ const Register = () => {
                 placeholder="Password"
                 required
               />
-              <div>
-                <a className="link link-hover">Forgot password?</a>
-              </div>
+
               <p className=" text-red-600">{error}</p>
               <button className="btn btn-neutral mt-4">Login</button>
               <p className=" text-center">
