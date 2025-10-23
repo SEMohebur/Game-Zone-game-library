@@ -28,7 +28,7 @@ const Detailpage = () => {
       <div className="  w-11/12 mx-auto">
         <div className=" p-5">
           <div className="card card-side bg-gray-800  shadow-xl flex flex-col md:flex-row">
-            <figure className=" rounded-0">
+            <figure className=" rounded-r-xl md:rounded-0">
               <img className=" h-72" src={coverPhoto} alt="game img" />
             </figure>
             <div className="card-body">

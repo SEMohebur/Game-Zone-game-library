@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import teamImg from "../assets/11224.jpg";
+import teamImg from "../assets/loginPageImg-removebg-preview.png";
 
 const About = () => {
   //dynamic tab name set
@@ -35,8 +35,8 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body items-center text-center">
-                <h2 className="card-title">Choyon</h2>
+              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
+                <h2 className="card-title">Mohebur</h2>
                 <p className=" ">Founder & Lead Gamer</p>
               </div>
             </div>
@@ -45,7 +45,7 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body items-center text-center">
+              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
                 <h2 className="card-title">Anik</h2>
                 <p className=" ">Community Manager</p>
               </div>
@@ -55,7 +55,7 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body items-center text-center">
+              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
                 <h2 className="card-title">Sunny</h2>
                 <p className=" ">Game Reviewer</p>
               </div>

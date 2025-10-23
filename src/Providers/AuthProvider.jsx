@@ -1,13 +1,18 @@
-import React, { Children, useEffect, useRef, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import { auth } from "../firebase/firebase.init";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
+  GoogleAuthProvider,
 } from "firebase/auth";
+
+//googleSignIn
+const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -40,6 +45,10 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, { displayName, photoURL });
   };
 
+  const googleSignIn = () => {
+    return signInWithPopup(auth, provider);
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setLoading(false);
@@ -61,6 +70,7 @@ const AuthProvider = ({ children }) => {
     LogOutUser,
     useForgetPageEmail,
     setUseForgatePageEmail,
+    googleSignIn,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import logo from "../assets/11224.jpg";
+import logo from "../assets/loginPageImg-removebg-preview.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Providers/AuthContext";
 import useImg from "../assets/userLog.jpg";
@@ -11,7 +11,11 @@ const Navbar = () => {
     <nav className="  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold">
       <div className=" w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center  py-2">
         <NavLink to="/">
-          <img className=" h-15 rounded-full" src={logo} alt="" />
+          <img
+            className=" h-12 w-12 border-2 border-b-pink-500 shadow rounded-full"
+            src={logo}
+            alt=""
+          />
         </NavLink>
 
         <ul className=" flex items-center mt-3 md:mt-0 gap-4">
@@ -32,14 +36,10 @@ const Navbar = () => {
           ) : (
             <>
               <li className=" flex gap-3">
-                <Link to="/login" className=" btn btn-primary">
-                  Login
-                </Link>
+                <NavLink to="/login">Login</NavLink>
               </li>
               <li>
-                <Link to="/register" className=" btn btn-warning">
-                  Register
-                </Link>
+                <NavLink to="/register">Register</NavLink>
               </li>
             </>
           )}
