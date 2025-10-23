@@ -1,11 +1,15 @@
-import React, { use, useEffect, useRef } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Providers/AuthContext";
 // import loginImg from "../assets/loginPageImg-removebg-preview.png";
 
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+
 const Login = () => {
   const { loginUser, setUseForgatePageEmail, googleSignIn } = use(AuthContext);
 
+  const [paswordShow, setPassworShow] = useState(false);
   const navigate = useNavigate();
   const emailRef = useRef(null);
 
@@ -51,20 +55,32 @@ const Login = () => {
               <label className="label">Email</label>
               <input
                 type="email"
-                className="input"
+                className="input w-full"
                 placeholder="Email"
                 name="email"
                 required
                 ref={emailRef}
               />
               <label className="label">Password</label>
-              <input
-                type="password"
-                className="input"
-                placeholder="Password"
-                name="password"
-                required
-              />
+              <div className=" relative">
+                <div className=" flex relative">
+                  <input
+                    id="password"
+                    name="password"
+                    type={paswordShow ? "text" : "password"}
+                    placeholder="Enter your password"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setPassworShow(!paswordShow)}
+                    className=" absolute mt-3 right-0 me-2 "
+                  >
+                    {paswordShow ? <FaRegEye /> : <FaRegEyeSlash />}
+                  </button>
+                </div>
+              </div>
               <div>
                 <button
                   type="button"

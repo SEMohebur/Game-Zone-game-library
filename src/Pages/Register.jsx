@@ -2,11 +2,15 @@ import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Providers/AuthContext";
 
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+
 const Register = () => {
   const { createUser, user, setUser, updateUser } = use(AuthContext);
   // console.log(user);
 
   const [error, setError] = useState(null);
+  const [paswordShow, setPassworShow] = useState(false);
   const navigate = useNavigate();
 
   //dynamic tab name set
@@ -58,7 +62,7 @@ const Register = () => {
               <input
                 name="name"
                 type="text"
-                className="input"
+                className="input w-full"
                 placeholder="Name"
                 required
               />
@@ -66,7 +70,7 @@ const Register = () => {
               <input
                 name="photo"
                 type="text"
-                className="input"
+                className="input w-full"
                 placeholder="Photo Url"
                 required
               />
@@ -74,18 +78,30 @@ const Register = () => {
               <input
                 name="email"
                 type="email"
-                className="input"
+                className="input w-full"
                 placeholder="Email"
                 required
               />
               <label className="label">Password</label>
-              <input
-                name="password"
-                type="password"
-                className="input"
-                placeholder="Password"
-                required
-              />
+              <div className=" relative">
+                <div className=" flex relative">
+                  <input
+                    id="password"
+                    name="password"
+                    type={paswordShow ? "text" : "password"}
+                    placeholder="Enter your password"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setPassworShow(!paswordShow)}
+                    className=" absolute mt-3 right-0 me-2 "
+                  >
+                    {paswordShow ? <FaRegEye /> : <FaRegEyeSlash />}
+                  </button>
+                </div>
+              </div>
 
               <p className=" text-red-600">{error}</p>
               <button className="btn btn-neutral mt-4">Login</button>

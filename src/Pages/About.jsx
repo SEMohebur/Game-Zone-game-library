@@ -52,9 +52,21 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
+              <div className="card-body bg-base-200 text-indigo-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Mohebur</h2>
                 <p className=" ">Founder & Lead Gamer</p>
+                <p className="text-gray-600 text-sm">
+                  Location: Dhaka, Bangladesh
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Favorite Game: Call of Duty
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Expertise: Wev Development
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Contact: mohebur@example.com
+                </p>
               </div>
             </div>
 
@@ -62,9 +74,18 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
+              <div className="card-body bg-base-200 text-indigo-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Anik</h2>
                 <p className=" ">Community Manager</p>
+                <p className="text-gray-600 text-sm">
+                  Location: Dhaka, Bangladesh
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Focus: Community Engagement & Support
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Contact: anik@example.com
+                </p>
               </div>
             </div>
 
@@ -72,9 +93,13 @@ const About = () => {
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body bg-indigo-600 rounded-4xl items-center text-center">
+              <div className="card-body bg-base-200 text-indigo-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Sunny</h2>
                 <p className=" ">Game Reviewer</p>
+                <p className="text-gray-600 text-sm">Location: Chittagong</p>
+                <p className="text-gray-600 text-sm">
+                  Speciality: Mobile & PC Games
+                </p>
               </div>
             </div>
           </motion.div>
