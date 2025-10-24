@@ -9,7 +9,6 @@ import { HiMiniIdentification } from "react-icons/hi2";
 import { BsFillClipboardDataFill } from "react-icons/bs";
 import { FaGear } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
-import BannerCard from "../Component/BannerCard";
 
 const Detailpage = () => {
   const data = useLoaderData();
@@ -35,7 +34,7 @@ const Detailpage = () => {
   // you migth also like feather er jonno
 
   const someGame = data.slice(0, 4);
-  console.log(someGame);
+  // console.log(someGame);
 
   return (
     <div className="bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 text-gray-300 min-h-screen py-10">
@@ -52,11 +51,11 @@ const Detailpage = () => {
               <div className=" flex items-center gap-2">
                 <a
                   href={downloadLink}
-                  className=" bg-lime-400 px-8 py-3 rounded-full text-gray-900"
+                  className=" bg-lime-400 px-8 py-1 rounded-full text-gray-900"
                 >
                   Get
                 </a>
-                <span className=" text-gray-500">
+                <span className=" text-gray-500 text-[10px]">
                   In App <br></br>Purchases
                 </span>
               </div>
@@ -64,13 +63,13 @@ const Detailpage = () => {
           </div>
           <hr className=" my-4" />
           <div className=" flex justify-between font-bold my-2">
-            <div className=" text-center text-gray-400 ">
+            <div className=" text-center text-gray-400 mb-0">
               <h4>Age</h4>
               <p className=" text-2xl text-gray-500">10+</p>
               <p>Years Old</p>
             </div>
 
-            <div className=" text-center text-gray-400 ">
+            <div className=" text-center text-gray-400  mb-0">
               <h4>Category</h4>
               <p className=" text-2xl text-gray-500 flex justify-center">
                 <TbCategoryFilled />
@@ -78,7 +77,7 @@ const Detailpage = () => {
               <p>{category}</p>
             </div>
 
-            <div className=" text-center text-gray-400 ">
+            <div className=" text-center text-gray-400  mb-0">
               <h4>Developer</h4>
               <p className=" text-2xl text-gray-500 flex justify-center">
                 <FaUser />
@@ -86,12 +85,14 @@ const Detailpage = () => {
               <p>{developer}</p>
             </div>
 
-            <div className=" text-center text-gray-400 ">
+            <div className=" text-center text-gray-400  mb-0">
               <h4>Language</h4>
               <p className=" text-2xl text-gray-500 flex justify-center">En</p>
               <p>+1 More</p>
             </div>
           </div>
+
+          <hr className=" my-3" />
           <div className="flex flex-col md:flex-row  gap-6">
             <img
               src={coverPhoto}
@@ -107,7 +108,8 @@ const Detailpage = () => {
                   <span>{category}</span>
                 </p>
                 <p className=" flex items-center gap-2">
-                  <span className=" font-semibold">Rating</span> :{ratings}
+                  <span className=" font-semibold">Rating</span>
+                  {ratings}
                   <FaStar className=" text-warning" />
                 </p>
               </div>
@@ -245,7 +247,7 @@ const Detailpage = () => {
               <div className=" grid grid-cols-1 sm:grid-cols-2  gap-3">
                 {someGame?.map((game) => {
                   return (
-                    <div className=" flex items-center gap-3">
+                    <div key={game.id} className=" flex items-center gap-3">
                       <img
                         className=" h-15 w-15 rounded-xl"
                         src={game.coverPhoto}

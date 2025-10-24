@@ -49,16 +49,7 @@
     "ratings": "4.5",
     "developer": "Supercell"
   },
-  {
-    "id": "6",
-    "title": "Genshin Impact",
-    "coverPhoto": "/Genshin Impact.jpeg",
-    "category": "Adventure RPG",
-    "downloadLink": "https://genshin.hoyoverse.com/",
-    "description": "Explore the vast magical world of Teyvat with rich storytelling, elemental combat, and stunning graphics.",
-    "ratings": "4.7",
-    "developer": "HoYoverse"
-  },
+
   {
     "id": "7",
     "title": "Apex Legends Mobile",

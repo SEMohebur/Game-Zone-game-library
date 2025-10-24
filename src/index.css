@@ -7,5 +7,5 @@ body {
 
 a.active {
   text-decoration: underline;
-  color: yellow;
+  color: rgb(175, 250, 89);
 }

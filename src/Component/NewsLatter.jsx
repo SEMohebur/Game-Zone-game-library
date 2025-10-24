@@ -35,7 +35,7 @@ const NewsLatter = () => {
           {/* right  */}
           <div className=" flex-1 ">
             <div>
-              <h2 className=" font-bold text-xl text-amber-200">
+              <h2 className=" font-bold text-xl text-lime-500">
                 Diverse Game Collection
               </h2>
               <p className=" text-amber-800">
@@ -44,7 +44,7 @@ const NewsLatter = () => {
               </p>
             </div>
             <div>
-              <h2 className=" font-bold text-xl text-amber-200">
+              <h2 className=" font-bold text-xl text-lime-500">
                 User Ratings & Reviews
               </h2>
               <p className=" text-amber-800">
@@ -53,7 +53,7 @@ const NewsLatter = () => {
               </p>
             </div>
             <div>
-              <h2 className=" font-bold text-xl text-amber-200">
+              <h2 className=" font-bold text-xl text-lime-500">
                 Interactive UI Design
               </h2>
               <p className=" text-amber-800">
@@ -63,9 +63,7 @@ const NewsLatter = () => {
             </div>
 
             <div>
-              <h2 className="font-bold text-xl text-amber-200">
-                User-friendly
-              </h2>
+              <h2 className="font-bold text-xl text-lime-500">User-friendly</h2>
               <p className="text-amber-800">
                 – Where players can easily find games, review ports, and explore
                 gameplay.

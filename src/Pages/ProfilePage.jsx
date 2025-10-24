@@ -1,12 +1,11 @@
 import React, { use, useEffect } from "react";
 import { AuthContext } from "../Providers/AuthContext";
 import { Link } from "react-router";
-import { auth } from "../firebase/firebase.init";
-import { updateProfile } from "firebase/auth";
+
 import * as motion from "motion/react-client";
 
 const ProfilePage = () => {
-  const { user, setUser, LogOutUser } = use(AuthContext);
+  const { user, LogOutUser } = use(AuthContext);
   //   console.log(user);
   const { displayName, email, photoURL, metadata } = user || {};
 
@@ -15,16 +14,6 @@ const ProfilePage = () => {
     document.title = "Profile | Gaming Zone";
   }, []);
 
-  const handleUpdate = (e) => {
-    e.preventDefault();
-    const displayName = e.target.name.value;
-    const photoURL = e.target.photo.value;
-    updateProfile(auth.currentUser, { displayName, photoURL })
-      .then((res) => {
-        setUser({ ...auth.currentUser }), alert("Update Successfull");
-      })
-      .catch((err) => alert(err.message));
-  };
   return (
     <div className=" bg-fuchsia-950 p-4">
       <div className=" w-11/12 mx-auto">
@@ -36,8 +25,8 @@ const ProfilePage = () => {
               Manage your personal information securely
             </p>
           </div>
-          <div className="hero bg-base-200">
-            <div className="hero-content flex flex-col text-center ">
+          <div className="hero bg-white rounded-b-2xl">
+            <div className="hero-content flex flex-col md:flex-row  text-center  m-5 rounded-2xl shadow-2xl ">
               <motion.img
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -67,43 +56,17 @@ const ProfilePage = () => {
                     {metadata.lastSignInTime}
                   </span>
                 </p>
-                <button
-                  onClick={LogOutUser}
-                  className=" btn bg-fuchsia-900 text-white"
-                >
-                  Log Out
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="hero bg-gray-300  rounded-b-2xl">
-            <div className="card  w-full max-w-sm shrink-0">
-              <div className="card-body">
-                <form onSubmit={handleUpdate}>
-                  <fieldset className="fieldset">
-                    <label className="label">Name</label>
-                    <input
-                      name="name"
-                      type="text"
-                      className="input w-full"
-                      placeholder="Name"
-                      required
-                    />
-                    <label className="label">Photo</label>
-                    <input
-                      name="photo"
-                      type="text"
-                      className="input w-full"
-                      placeholder="Photo Url"
-                      required
-                    />
-
-                    <button className="btn btn-primary text-white mt-4">
-                      Update
-                    </button>
-                  </fieldset>
-                </form>
+                <div className=" flex items-center justify-center gap-3">
+                  <button
+                    onClick={LogOutUser}
+                    className=" btn bg-fuchsia-900 text-white"
+                  >
+                    Log Out
+                  </button>
+                  <Link to="/update" className=" btn btn-primary">
+                    Update
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

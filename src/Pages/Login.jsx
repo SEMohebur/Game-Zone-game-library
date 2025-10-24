@@ -37,11 +37,12 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     googleSignIn()
-      .then(() =>
+      .then(() => {
         alert(
           "This gives you a Google Access Token. You can use it to access the Google API"
-        )
-      )
+        );
+        navigate("/");
+      })
       .catch((err) => alert(err.message));
   };
 

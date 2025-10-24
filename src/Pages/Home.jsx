@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NewsLatter from "../Component/NewsLatter";
 import * as motion from "motion/react-client";
+import Card from "../Component/Card";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -24,42 +25,40 @@ const Home = () => {
   const sortedApp = data?.sort(
     (a, b) => parseFloat(b.ratings) - parseFloat(a.ratings)
   );
-  const bannerCards = sortedApp?.slice(0, 4) || [];
-
-  const slidesToShow = Math.min(3, bannerCards.length);
+  const bannerCards = sortedApp?.slice(0, 3) || [];
 
   const settings = {
     dots: true,
-    infinite: bannerCards.length > slidesToShow,
+    infinite: bannerCards.length > 1,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: Math.min(3, bannerCards.length),
-          infinite: bannerCards.length > 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: Math.min(2, bannerCards.length),
-          infinite: bannerCards.length > 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: Math.min(1, bannerCards.length),
-          infinite: bannerCards.length > 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       infinite: bannerCards.length > 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       infinite: bannerCards.length > 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 640,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       infinite: bannerCards.length > 1,
+    //     },
+    //   },
+    // ],
   };
 
   return (
@@ -80,7 +79,7 @@ const Home = () => {
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
               }}
-              className="text-blue-600 text-4xl md:text-5xl font-bold mb-4 text-center"
+              className=" text-lime-500 text-4xl md:text-5xl font-bold mb-4 text-center"
             >
               Explore Trending <span className="text-red-500">Games</span>
             </motion.h2>
@@ -111,13 +110,13 @@ const Home = () => {
       </section>
       <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 ">
         <div className=" w-11/12 mx-auto py-5">
-          <h2 className=" text-4xl text-center text-cyan-500 py-5 underline">
-            All App
+          <h2 className=" text-4xl font-bold text-center text-lime-500 py-5 underline">
+            All Games
           </h2>
 
           <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3">
             {data?.map((game) => {
-              return <BannerCard key={game.id} game={game}></BannerCard>;
+              return <Card key={game.id} game={game}></Card>;
             })}
           </div>
         </div>

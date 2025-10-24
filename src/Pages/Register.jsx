@@ -6,7 +6,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, user, setUser, updateUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
   // console.log(user);
 
   const [error, setError] = useState(null);
@@ -42,7 +42,7 @@ const Register = () => {
     createUser(email, password)
       .then((res) => {
         updateUser(displayName, photoURL)
-          .then((upRes) => {
+          .then(() => {
             setUser(res.user), alert("Register Succesful!");
             navigate("/login");
           })
