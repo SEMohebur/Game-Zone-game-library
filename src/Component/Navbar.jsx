@@ -38,6 +38,9 @@ const Navbar = () => {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
+          <li>
+            <NavLink to="/reviews">Reviews</NavLink>
+          </li>
           {user ? (
             <Link to="/profile">
               <motion.img

@@ -69,7 +69,7 @@ const Home = () => {
       >
         <section className="banner w-11/12 mx-auto py-16">
           <div
-            className="bg-gray-800 bg-opacity-90 p-10 pt-20 rounded-2xl 
+            className="bg-gray-600 bg-opacity-90 p-10 pt-20 rounded-2xl 
           shadow-[0_4px_20px_rgba(255,0,0,0.6)]"
           >
             <motion.h2

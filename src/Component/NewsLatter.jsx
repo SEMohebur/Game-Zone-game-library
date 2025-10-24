@@ -1,4 +1,4 @@
-import logo from "../assets/11224.jpg";
+import logo from "../assets/loginPageImg-removebg-preview.png";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { ImNewspaper } from "react-icons/im";
 import * as motion from "motion/react-client";
@@ -22,7 +22,11 @@ const NewsLatter = () => {
           {/* left  */}
           <div className=" flex-1 ">
             <div className=" flex justify-center mb-5">
-              <img className=" h-40 rounded-full" src={logo} alt="" />
+              <img
+                className=" h-40 rounded-full border-4 text-lime-500"
+                src={logo}
+                alt=""
+              />
             </div>
 
             <p className=" text-gray-300">

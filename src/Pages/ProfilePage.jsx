@@ -19,7 +19,7 @@ const ProfilePage = () => {
       <div className=" w-11/12 mx-auto">
         <div className=" bg-fuchsia-800 rounded-2xl">
           <div className=" text-center p-3">
-            <h2 className=" text-3xl text-white font-bold">User Profile</h2>
+            <h2 className=" text-3xl text-white font-bold">My Profile</h2>
             <p className=" text-fuchsia-200">
               {" "}
               Manage your personal information securely

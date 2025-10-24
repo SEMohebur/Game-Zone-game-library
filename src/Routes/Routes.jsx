@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import ProfilePage from "../Pages/ProfilePage";
 import ForgetPassWord from "../Pages/ForgetPassWord";
 import UpdatePage from "../Pages/UpdatePage";
+import Reviews from "../Pages/Reviews";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/allAppsData.json"),
-        hydrateFallbackElement: <p>Loading...</p>,
+        hydrateFallbackElement: <p className=" text-center">Loading...</p>,
       },
       { path: "/about", element: <About></About> },
       { path: "/login", element: <Login></Login> },
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
         ),
       },
       { path: "/forget", element: <ForgetPassWord></ForgetPassWord> },
+      {
+        path: "/reviews",
+        element: <Reviews></Reviews>,
+      },
     ],
   },
   { path: "*", element: <NotFoundPage></NotFoundPage> },
