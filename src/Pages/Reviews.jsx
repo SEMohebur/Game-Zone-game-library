@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { IoLogoGameControllerB } from "react-icons/io";
 
 const Reviews = () => {
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "Reviews | Gaming Zone";
+  }, []);
   return (
     <div className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 p-10">
       <div className="w-11/12 mx-auto bg-white p-4 rounded-2xl">

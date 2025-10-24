@@ -84,15 +84,31 @@ const Home = () => {
               Explore Trending <span className="text-red-500">Games</span>
             </motion.h2>
 
-            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto text-center my-6 leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+              }}
+              className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto text-center my-6 leading-relaxed"
+            >
               Enter a world where action, strategy, and adventure unite! Battle
               in shooters and battle royales, explore open worlds, and rise as a
               legend. Challenge players globally, experience stunning visuals,
               and enjoy every thrilling moment. Grab your controller, gear up,
               and start your ultimate gaming journey!
-            </p>
+            </motion.p>
 
-            <div className="mt-6 ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+              }}
+              className="mt-6 "
+            >
               <Slider {...settings}>
                 {bannerCards.map((game) => (
                   <div key={game.id} className="px-2">
@@ -100,7 +116,7 @@ const Home = () => {
                   </div>
                 ))}
               </Slider>
-            </div>
+            </motion.div>
           </div>
         </section>
       </section>

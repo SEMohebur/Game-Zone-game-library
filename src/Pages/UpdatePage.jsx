@@ -29,6 +29,11 @@ const UpdatePage = () => {
       })
       .catch((err) => alert(err.message));
   };
+
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "Update | Gaming Zone";
+  }, []);
   return (
     <div className=" bg-fuchsia-950  py-5">
       <div className=" w-11/12 mx-auto">

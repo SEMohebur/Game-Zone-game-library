@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import { AuthContext } from "../Providers/AuthContext";
 import { auth } from "../firebase/firebase.init";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -18,6 +18,11 @@ const ForgetPassWord = () => {
       .catch((err) => alert(err.message));
     window.open("https://mail.google.com", "_blank");
   };
+
+  //dynamic tab name set
+  useEffect(() => {
+    document.title = "Forget | Gaming Zone";
+  }, []);
   return (
     <div className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 p-4">
       <div className=" w-11/12 mx-auto">
