@@ -66,6 +66,17 @@ const Reviews = () => {
                 and stay updated.
               </p>
             </div>
+
+            <div className="shadow rounded-2xl p-5 text-center">
+              <h3 className="font-bold text-xl text-lime-500">
+                Seamless Gaming Experience
+              </h3>
+              <p className="text-gray-500">
+                Game Zone ensures smooth navigation and lightning-fast
+                performance, allowing players to explore, review, and download
+                their favorite games without any interruptions or delays.
+              </p>
+            </div>
           </div>
         </div>
       </div>

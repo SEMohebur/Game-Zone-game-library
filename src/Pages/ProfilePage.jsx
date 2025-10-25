@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import * as motion from "motion/react-client";
 
 const ProfilePage = () => {
-  const { user, LogOutUser } = use(AuthContext);
+  const { user } = use(AuthContext);
   //   console.log(user);
   const { displayName, email, photoURL, metadata } = user || {};
 
@@ -57,12 +57,6 @@ const ProfilePage = () => {
                   </span>
                 </p>
                 <div className=" flex items-center justify-center gap-3">
-                  <button
-                    onClick={LogOutUser}
-                    className=" btn bg-fuchsia-900 text-white"
-                  >
-                    Log Out
-                  </button>
                   <Link to="/update" className=" btn btn-primary">
                     Update
                   </Link>

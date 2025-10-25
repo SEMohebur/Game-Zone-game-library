@@ -45,7 +45,7 @@ const ForgetPassWord = () => {
                 required
               />
               <button className="bg-fuchsia-700 text-white w-full py-2 rounded-md mt-2">
-                Reset Passwrd
+                Reset Password
               </button>
             </div>
           </form>

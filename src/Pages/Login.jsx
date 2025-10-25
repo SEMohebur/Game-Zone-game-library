@@ -91,7 +91,7 @@ const Login = () => {
                   Forgot password?
                 </button>
               </div>
-              <button className="btn btn-primary mt-4">Login</button>
+              <button className="btn btn-primary mt-4">Login Now</button>
               {/* Google */}
               <button
                 onClick={handleGoogleSignIn}
@@ -130,7 +130,7 @@ const Login = () => {
               <p className=" text-center">
                 Don’t have an account?
                 <Link to="/register" className=" text-red-500">
-                  Register
+                  Register Now
                 </Link>
               </p>
             </fieldset>

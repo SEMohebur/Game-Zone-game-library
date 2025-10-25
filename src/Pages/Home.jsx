@@ -69,7 +69,7 @@ const Home = () => {
       >
         <section className="banner w-11/12 mx-auto py-16">
           <div
-            className="bg-gray-600 bg-opacity-90 p-10 pt-20 rounded-2xl 
+            className="bg-gray-100  bg-opacity-90 p-10 pt-20 rounded-2xl 
           shadow-[0_4px_20px_rgba(255,0,0,0.6)]"
           >
             <motion.h2
@@ -91,7 +91,7 @@ const Home = () => {
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
               }}
-              className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto text-center my-6 leading-relaxed"
+              className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto text-center my-6 leading-relaxed"
             >
               Enter a world where action, strategy, and adventure unite! Battle
               in shooters and battle royales, explore open worlds, and rise as a
@@ -107,7 +107,7 @@ const Home = () => {
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
               }}
-              className="mt-6 "
+              className="mt-6"
             >
               <Slider {...settings}>
                 {bannerCards.map((game) => (

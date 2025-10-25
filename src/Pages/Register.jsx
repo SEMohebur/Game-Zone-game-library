@@ -104,11 +104,11 @@ const Register = () => {
               </div>
 
               <p className=" text-red-600">{error}</p>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <button className="btn btn-primary mt-4">Register Now</button>
               <p className=" text-center">
                 Don’t have an account?
                 <Link to="/login" className=" text-red-500">
-                  Login
+                  Login Now
                 </Link>
               </p>
             </fieldset>
