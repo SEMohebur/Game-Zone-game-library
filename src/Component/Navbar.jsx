@@ -46,11 +46,11 @@ const Navbar = () => {
             <>
               <li>
                 <button
-                  className="  bg-lime-500 p-2 hover:bg-lime-600 duration-300 rounded-4xl cursor-pointer flex items-center"
+                  className="  bg-lime-500 p-1 hover:bg-lime-600 duration-300 rounded-4xl cursor-pointer flex items-center"
                   onClick={LogOutUser}
                 >
                   <FaSignOutAlt />
-                  <span>Log Out</span>
+                  <span className=" text-sm font-thin">Log Out</span>
                 </button>
               </li>
               <Link to="/profile">
