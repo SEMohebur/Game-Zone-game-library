@@ -36,41 +36,18 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       infinite: bannerCards.length > 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       infinite: bannerCards.length > 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 640,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       infinite: bannerCards.length > 1,
-    //     },
-    //   },
-    // ],
   };
 
   return (
     <div>
       <section
         style={{ backgroundImage: `url(${bgImg})` }}
-        className="banner bg-cover min-h-screen bg-center"
+        className="banner bg-cover bg-center "
       >
-        <section className="banner w-11/12 mx-auto py-16">
+        <section className="banner w-11/12 mx-auto py-5 h-full">
           <div
-            className="bg-gray-100  bg-opacity-90 p-10 pt-20 rounded-2xl 
-          shadow-[0_4px_20px_rgba(255,0,0,0.6)]"
+            className="bg-gray-100 bg-opacity-90 p-10 pt-6 rounded-2xl 
+        shadow-[0_4px_20px_rgba(255,0,0,0.6)] h-full"
           >
             <motion.h2
               initial={{ opacity: 0, scale: 0 }}
@@ -79,7 +56,7 @@ const Home = () => {
                 duration: 0.4,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
               }}
-              className=" text-lime-500 text-4xl md:text-5xl font-bold mb-4 text-center"
+              className="text-lime-500 text-4xl md:text-5xl font-bold mb-4 text-center"
             >
               Explore Trending <span className="text-red-500">Games</span>
             </motion.h2>
@@ -95,9 +72,7 @@ const Home = () => {
             >
               Enter a world where action, strategy, and adventure unite! Battle
               in shooters and battle royales, explore open worlds, and rise as a
-              legend. Challenge players globally, experience stunning visuals,
-              and enjoy every thrilling moment. Grab your controller, gear up,
-              and start your ultimate gaming journey!
+              legend...
             </motion.p>
 
             <motion.div
@@ -124,14 +99,15 @@ const Home = () => {
       <section>
         <NewsLatter></NewsLatter>
       </section>
-      <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 ">
-        <div className=" w-11/12 mx-auto py-5">
-          <h2 className=" text-4xl font-bold text-center text-lime-500 py-5 underline">
-            All Games
+
+      <section className="bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900">
+        <div className="w-11/12 mx-auto pb-5">
+          <h2 className="text-4xl font-bold text-center text-lime-500 py-5 ">
+            Top Rating Games
           </h2>
 
-          <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3">
-            {data?.map((game) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            {sortedApp?.slice(0, 8).map((game) => {
               return <Card key={game.id} game={game}></Card>;
             })}
           </div>

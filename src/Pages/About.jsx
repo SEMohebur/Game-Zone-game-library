@@ -8,7 +8,7 @@ const About = () => {
     document.title = "About | Gaming Zone";
   }, []);
   return (
-    <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 text-white bg-opacity-90 py-20 px-4">
+    <section className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 text-white bg-opacity-90 py-6 px-4">
       <div className=" w-11/12 mx-auto space-y-10 bg-white p-10 rounded-2xl">
         <div className=" text-center">
           {" "}
@@ -48,13 +48,18 @@ const About = () => {
             }}
             className=" grid grid-cols-1 md:grid-cols-3 gap-3"
           >
-            <div className="card">
+            <div className="card rounded-4xl shadow transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <figure>
-                <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
+                <img
+                  src={teamImg}
+                  alt="Shoes"
+                  className="rounded-t-md h-40 transition-all duration-500 hover:brightness-105"
+                />
               </figure>
+
               <div className="card-body shadow-xl text-lime-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Mohebur</h2>
-                <p className=" ">Founder & Lead Gamer</p>
+                <p>Founder & Lead Gamer</p>
                 <p className="text-gray-600 text-sm">
                   Location: Dhaka, Bangladesh
                 </p>
@@ -62,7 +67,7 @@ const About = () => {
                   Favorite Game: Call of Duty
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Expertise: Wev Development
+                  Expertise: Web Development
                 </p>
                 <p className="text-gray-600 text-sm">
                   Contact: mohebur@example.com
@@ -70,11 +75,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="card ">
+            <div className="card rounded-4xl shadow transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body shadow-2xl  text-lime-500 rounded-4xl items-center text-center">
+              <div className="card-body shadow-xl  text-lime-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Anik</h2>
                 <p className=" ">Community Manager</p>
                 <p className="text-gray-600 text-sm">
@@ -89,11 +94,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="card ">
+            <div className="card rounded-4xl shadow transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <figure>
                 <img src={teamImg} alt="Shoes" className="rounded-t-md h-40" />
               </figure>
-              <div className="card-body shadow-2xl text-lime-500 rounded-4xl items-center text-center">
+              <div className="card-body shadow-xl text-lime-500 rounded-4xl items-center text-center">
                 <h2 className="card-title">Sunny</h2>
                 <p className=" ">Game Reviewer</p>
                 <p className="text-gray-600 text-sm">Location: Chittagong</p>

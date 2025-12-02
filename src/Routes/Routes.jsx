@@ -11,6 +11,8 @@ import ProfilePage from "../Pages/ProfilePage";
 import ForgetPassWord from "../Pages/ForgetPassWord";
 import UpdatePage from "../Pages/UpdatePage";
 import Reviews from "../Pages/Reviews";
+import ContactUs from "../Pages/ContactUs";
+import AllGame from "../Pages/AllGame";
 
 export const router = createBrowserRouter([
   {
@@ -20,11 +22,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Home></Home> },
       {
         path: "/detailPage/:id",
-        element: (
-          <PrivateRoute>
-            <Detailpage></Detailpage>
-          </PrivateRoute>
-        ),
+        element: <Detailpage></Detailpage>,
         loader: () => fetch("/allAppsData.json"),
         hydrateFallbackElement: <p className=" text-center">Loading...</p>,
       },
@@ -52,6 +50,14 @@ export const router = createBrowserRouter([
       {
         path: "/reviews",
         element: <Reviews></Reviews>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/allGame",
+        element: <AllGame></AllGame>,
       },
     ],
   },

@@ -19,7 +19,7 @@ const Navbar = () => {
   // console.log(user);
   //
   return (
-    <nav className="  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold">
+    <nav className="  sticky top-0 z-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold">
       <div className=" w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center  py-2">
         <NavLink to="/">
           <motion.img
@@ -37,10 +37,16 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="  hover:text-lime-500 duration-300">
+            <NavLink to="/allGame">All Game</NavLink>
+          </li>
+          <li className="  hover:text-lime-500 duration-300">
             <NavLink to="/about">About</NavLink>
           </li>
           <li className="  hover:text-lime-500 duration-300">
             <NavLink to="/reviews">Reviews</NavLink>
+          </li>
+          <li className="  hover:text-lime-500 duration-300">
+            <NavLink to="/contact">Contact Us</NavLink>
           </li>
           {user ? (
             <>

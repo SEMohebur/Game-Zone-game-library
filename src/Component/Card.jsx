@@ -8,7 +8,7 @@ import { FaUser } from "react-icons/fa";
 const Card = ({ game }) => {
   const { category, coverPhoto, description, developer, ratings, title } = game;
   return (
-    <div className="card bg-gray-200  shadow-sm">
+    <div className="card bg-gray-200 rounded-xl shadow transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
       <figure>
         <img
           src={coverPhoto}

@@ -5,10 +5,10 @@ import * as motion from "motion/react-client";
 
 const NewsLatter = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16 px-4">
+    <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-2 px-4">
       <div className=" w-11/12 mx-auto ">
         <h2 className=" flex justify-center">
-          <ImNewspaper className=" mb-15 size-20" />
+          <ImNewspaper className=" mb-5 size-20" />
         </h2>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -42,7 +42,7 @@ const NewsLatter = () => {
               <h2 className=" font-bold text-xl text-lime-500">
                 Diverse Game Collection
               </h2>
-              <p className=" text-amber-800">
+              <p className=" text-gray-300">
                 – Explore a wide range of trending, action, strategy, and
                 adventure games in one place.
               </p>
@@ -51,7 +51,7 @@ const NewsLatter = () => {
               <h2 className=" font-bold text-xl text-lime-500">
                 User Ratings & Reviews
               </h2>
-              <p className=" text-amber-800">
+              <p className=" text-gray-300">
                 -Easily find the best games based on community ratings and
                 player feedback.
               </p>
@@ -60,7 +60,7 @@ const NewsLatter = () => {
               <h2 className=" font-bold text-xl text-lime-500">
                 Interactive UI Design
               </h2>
-              <p className=" text-amber-800">
+              <p className=" text-gray-300">
                 – Enjoy a smooth, modern, and responsive interface built for an
                 immersive gaming experience.
               </p>
@@ -68,7 +68,7 @@ const NewsLatter = () => {
 
             <div>
               <h2 className="font-bold text-xl text-lime-500">User-friendly</h2>
-              <p className="text-amber-800">
+              <p className=" text-gray-300">
                 – Where players can easily find games, review ports, and explore
                 gameplay.
               </p>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { use, useEffect } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { FaStar } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
@@ -9,8 +9,11 @@ import { HiMiniIdentification } from "react-icons/hi2";
 import { BsFillClipboardDataFill } from "react-icons/bs";
 import { FaGear } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
+import { AuthContext } from "../Providers/AuthContext";
 
 const Detailpage = () => {
+  const { user } = use(AuthContext);
+
   const data = useLoaderData();
   const { id } = useParams();
 
@@ -50,7 +53,7 @@ const Detailpage = () => {
               <p className=" text-lime-700">{category}</p>
               <div className=" flex items-center gap-2">
                 <a
-                  href={downloadLink}
+                  href={user ? downloadLink : "/login"}
                   className=" bg-lime-400 px-8 py-1 rounded-full text-gray-900"
                 >
                   Get
@@ -220,7 +223,7 @@ const Detailpage = () => {
                       <span> Identifiers</span>
                     </p>
                   </div>
-                  <div className=" flex justify-between">
+                  <div className=" flex  justify-between">
                     <p className=" flex items-center gap-2">
                       <BsFillClipboardDataFill />
                       <span> User Data</span>
@@ -240,7 +243,7 @@ const Detailpage = () => {
                 <h2 className=" text-xl my-3 font-semibold text-lime-500">
                   you might also like
                 </h2>
-                <Link to="/" className=" btn bg-lime-500">
+                <Link to="/allGame" className=" btn bg-lime-500">
                   See All
                 </Link>
               </div>

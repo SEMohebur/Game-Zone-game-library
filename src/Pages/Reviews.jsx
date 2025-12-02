@@ -7,7 +7,7 @@ const Reviews = () => {
     document.title = "Reviews | Gaming Zone";
   }, []);
   return (
-    <div className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 p-10">
+    <div className=" bg-gradient-to-br from-purple-900 via-fuchsia-900 to-indigo-900 p-6">
       <div className="w-11/12 mx-auto bg-white p-4 rounded-2xl">
         <h2 className="text-3xl font-bold text-center mb-6 text-lime-500">
           <p className=" flex justify-center">
@@ -19,7 +19,7 @@ const Reviews = () => {
         <hr className=" text-gray-300 my-3 "></hr>
         <div className="">
           <div className="  grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className=" shadow rounded-2xl p-5 text-center">
+            <div className=" shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className=" font-bold text-xl text-lime-500">
                 Interactive Gaming Experience
               </h3>
@@ -29,7 +29,7 @@ const Reviews = () => {
                 experience.
               </p>
             </div>
-            <div className=" shadow rounded-2xl p-5 text-center">
+            <div className="  shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className=" font-bold text-xl text-lime-500">
                 Wide Game Collection
               </h3>
@@ -38,7 +38,7 @@ const Reviews = () => {
                 a diverse selection to cater to all types of gamers.
               </p>
             </div>
-            <div className=" shadow rounded-2xl p-5 text-center">
+            <div className="  shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className=" font-bold text-xl text-lime-500">
                 User-Friendly Interface
               </h3>
@@ -47,7 +47,7 @@ const Reviews = () => {
                 allows even new users to explore games effortlessly.
               </p>
             </div>
-            <div className=" shadow rounded-2xl p-5 text-center">
+            <div className="  shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className=" font-bold text-xl text-lime-500">
                 High-Quality Reviews & Ratings
               </h3>
@@ -56,7 +56,7 @@ const Reviews = () => {
                 informed decisions and discover top games easily.
               </p>
             </div>
-            <div className=" shadow rounded-2xl p-5 text-center">
+            <div className="  shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className=" font-bold text-xl text-lime-500">
                 Engaging Community
               </h3>
@@ -67,7 +67,7 @@ const Reviews = () => {
               </p>
             </div>
 
-            <div className="shadow rounded-2xl p-5 text-center">
+            <div className=" shadow rounded-2xl p-5 text-center  transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
               <h3 className="font-bold text-xl text-lime-500">
                 Seamless Gaming Experience
               </h3>
