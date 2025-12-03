@@ -44,7 +44,7 @@ const Register = () => {
         updateUser(displayName, photoURL)
           .then(() => {
             setUser(res.user), alert("Register Succesful!");
-            navigate("/login");
+            navigate("/");
           })
           .catch((err) => console.log(err.message));
       })

@@ -40,7 +40,7 @@ const UpdatePage = () => {
         <div className="hero bg-white  rounded-2xl ">
           <div className="card  w-full max-w-sm shrink-0">
             <div className="card-body m-7 rounded-2xl shadow-2xl">
-              <h2 className=" text-center font-bold text-3xl">
+              <h2 className=" text-center font-bold text-3xl text-gray-700">
                 Update Profile
               </h2>
               <form onSubmit={handleUpdate}>

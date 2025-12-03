@@ -7,7 +7,6 @@ const ContactForm = () => {
     const userName = e.target.userName.value;
     const email = e.target.email.value;
     const message = e.target.message.value;
-
     console.log(userName, email, message);
   };
 
@@ -31,7 +30,7 @@ const ContactForm = () => {
             <input
               type="text"
               name="userName"
-              className="w-full p-3 border rounded-xl shadow-sm"
+              className="w-full p-3 border rounded-xl shadow-sm "
               placeholder="Enter your name"
               required
             />
@@ -67,7 +66,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition duration-300"
+            className="w-full bg-lime-600 text-white py-3 rounded-xl font-semibold hover:bg-lime-700 transition duration-300 cursor-pointer"
           >
             Send Message
           </button>

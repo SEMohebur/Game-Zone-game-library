@@ -31,7 +31,7 @@ const Card = ({ game }) => {
             <FaUser className=" text-indigo-600" /> {developer}
           </div>
         </div>
-        <p className=" flex items-center gap-2">
+        <p className=" flex items-center gap-2 text-gray-700">
           {ratings}{" "}
           <span className=" flex text-warning">
             <FaStar />
@@ -44,7 +44,7 @@ const Card = ({ game }) => {
         <div className="card-actions justify-end">
           <Link
             to={`/detailPage/${game.id}`}
-            className="btn bg-lime-500 text-white"
+            className="btn bg-lime-500 text-white border-none"
           >
             Game Detail
           </Link>

@@ -1,10 +1,11 @@
 import React from "react";
+import logo from "../assets/loginPageImg-removebg-preview.png";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaDiscord,
+  FaLinkedinIn,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -12,6 +13,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
+          <img src={logo} alt="" className=" h-20" />
           <h3 className="text-2xl font-bold text-white mb-4">GameZone</h3>
           <p className="text-gray-400">
             Your ultimate destination for action-packed, adventure-filled games.
@@ -22,23 +24,34 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a className="hover:text-red-500 transition">Home</a>
+              <a href="/" className="hover:text-red-500 transition">
+                Home
+              </a>
             </li>
             <li>
-              <a className="hover:text-red-500 transition">Games</a>
+              <a href="allGame" className="hover:text-red-500 transition">
+                All Games
+              </a>
+            </li>
+
+            <li>
+              <a href="/about" className="hover:text-red-500 transition">
+                About Us
+              </a>
             </li>
             <li>
-              <a className="hover:text-red-500 transition">News</a>
+              <a href="/reviews" className="hover:text-red-500 transition">
+                Review
+              </a>
             </li>
             <li>
-              <a className="hover:text-red-500 transition">About Us</a>
-            </li>
-            <li>
-              <a className="hover:text-red-500 transition">Contact</a>
+              <a href="/contact" className="hover:text-red-500 transition">
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>
-        <div>
+        <div className=" ">
           <h4 className="text-xl font-semibold text-white mb-4">Support</h4>
           <ul className="space-y-2">
             <li>
@@ -66,11 +79,20 @@ const Footer = () => {
         <div>
           <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-blue-500 transition">
+            <a
+              href="https://www.facebook.com/share/1Ep2JJsFW6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="hover:text-sky-400 transition">
-              <FaTwitter size={20} />
+            <a
+              href="https://www.linkedin.com/in/mdmohebur11/"
+              target="_blank"
+              className="hover:text-sky-400 transition"
+            >
+              <FaLinkedinIn size={20} />
             </a>
             <a href="#" className="hover:text-pink-500 transition">
               <FaInstagram size={20} />

@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 
 const NewsLatter = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-2 px-4">
+    <section className=" text-white py-2 px-4">
       <div className=" w-11/12 mx-auto ">
         <h2 className=" flex justify-center">
           <ImNewspaper className=" mb-5 size-20" />

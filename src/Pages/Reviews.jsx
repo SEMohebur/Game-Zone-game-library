@@ -14,7 +14,7 @@ const Reviews = () => {
             {" "}
             <IoLogoGameControllerB />
           </p>
-          Game Reviews
+          <span className=" text-gray-700">Reviews</span> Game
         </h2>
         <hr className=" text-gray-300 my-3 "></hr>
         <div className="">

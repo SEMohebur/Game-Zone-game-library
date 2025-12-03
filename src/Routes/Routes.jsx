@@ -13,11 +13,13 @@ import UpdatePage from "../Pages/UpdatePage";
 import Reviews from "../Pages/Reviews";
 import ContactUs from "../Pages/ContactUs";
 import AllGame from "../Pages/AllGame";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home></Home> },
       {

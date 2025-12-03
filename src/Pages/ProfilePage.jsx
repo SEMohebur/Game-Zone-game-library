@@ -37,7 +37,7 @@ const ProfilePage = () => {
                 src={photoURL}
                 className="max-w-sm h-36 w-36  rounded-full shadow-xl  border-3 border-fuchsia-500 p-1 "
               />
-              <div className=" m-5 space-y-3">
+              <div className=" m-5 space-y-3  text-gray-700">
                 <h1 className="text-2xl text-fuchsia-800 font-bold">
                   {displayName}
                 </h1>
